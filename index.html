@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing mail detection and mitigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <nav>AYIDIL</nav>
+    <div class="container" id="container">
+        <div class="form-container">
+            <div class="analyser">
+            <p>Analyse Your Mail Now <i class="fa-solid fa-circle" id="red"></i><i class="fa-solid fa-circle" id="yellow"></i><i class="fa-solid fa-circle" id="green"></i></p>
+            <textarea id="email" rows="7" cols="50" placeholder="Paste the email here 
+
+For Example,
+
+Dear User,
+Your bank account has been temporarily suspended due to suspicious activity. Click the link below immediately to verify your identity:
+http://secure-bank-verification-login.xyz
+Failure to verify within 24 hours will result in permanent suspension." ></textarea>
+        <button id="analyser"><i class="fa-brands fa-sistrix"></i>Analyse</button>
+        <div id="moderate">
+           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="50px" width="50px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+<path style="fill:#FF9900;" d="M507.494,426.066L282.864,53.536c-5.677-9.415-15.87-15.172-26.865-15.172  c-10.994,0-21.188,5.756-26.865,15.172L4.506,426.066c-5.842,9.689-6.015,21.774-0.451,31.625  c5.564,9.852,16.001,15.944,27.315,15.944h449.259c11.314,0,21.751-6.093,27.315-15.944  C513.509,447.839,513.336,435.755,507.494,426.066z"/>
+<path style="fill:#FFDC35;" d="M255.999,38.365c-10.994,0-21.188,5.756-26.865,15.172L4.506,426.066  c-5.842,9.689-6.015,21.774-0.451,31.625c5.564,9.852,16.001,15.944,27.315,15.944h224.629L255.999,38.365L255.999,38.365z"/>
+<path style="fill:#F20013;" d="M445.326,432.791H67.108c-3.591,0-6.911-1.909-8.718-5.012c-1.807-3.104-1.827-6.934-0.055-10.056  L247.23,85.028c1.792-3.155,5.139-5.106,8.767-5.107c0.001,0,0.003,0,0.004,0c3.626,0,6.974,1.946,8.767,5.099l189.324,332.694  c1.777,3.123,1.759,6.955-0.047,10.061S448.918,432.791,445.326,432.791z M84.436,412.616h343.543L256.013,110.423L84.436,412.616z"/>
+<path style="fill:#FF4B00;" d="M256.332,412.616H84.436l171.576-302.192l-0.01-30.501h-0.005c-3.628,0.001-6.976,1.951-8.767,5.107  L58.336,417.722c-1.773,3.123-1.752,6.953,0.055,10.056c1.807,3.104,5.127,5.012,8.718,5.012h189.224v-20.175H256.332z"/>
+<path style="fill:#533F29;" d="M279.364,376.883c0,12.344-10.537,23.182-22.88,23.182c-13.246,0-23.182-10.838-23.182-23.182  c0-12.644,9.935-23.182,23.182-23.182C268.826,353.701,279.364,364.238,279.364,376.883z M273.644,319.681  c0,9.333-10.236,13.246-17.462,13.246c-9.634,0-17.762-3.914-17.762-13.246c0-35.826-4.214-87.308-4.214-123.134  c0-11.741,9.634-18.365,21.977-18.365c11.741,0,21.677,6.623,21.677,18.365C277.858,232.373,273.644,283.855,273.644,319.681z"/>
+</svg>  
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name-1">Safe</div>
+                <div class="skill-bar-1">
+                <div class="skill-per-11" per="27%" style="max-width: 27%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name-1">Phishing</div>
+                <div class="skill-bar-1">
+                <div class="skill-per-12" per="73%" style="max-width: 73%;"></div>
+                </div>
+            </div>
+        </div>
+</div>
+        <div id="danger">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="50px" height="50px" viewBox="0 0 736.000000 736.000000" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.16, written by Peter Selinger 2001-2019
+</metadata>
+<g transform="translate(0.000000,736.000000) scale(0.100000,-0.100000)" fill="#ff0000" stroke="none">
+<path d="M3465 6236 c-200 -33 -380 -105 -556 -222 -100 -66 -293 -260 -358 -359 -111 -169 -183 -352 -217 -545 -25 -144 -15 -412 19 -540 50 -189 87 -243 229 -335 119 -78 199 -144 283 -234 77 -81 83 -90 108 -159 17 -48 21 -90 26 -264 l6 -206 31 -39 c18 -22 51 -46 78 -57 41 -18 52 -19 94 -7 56 15 98 51 122 106 l17 40 7 -33 c16 -71 115 -132 191 -118 50 10 96 46 120 95 l22 43 22 -46 c54 -110 196 -127 276 -33 19 22 35 49 35 59 0 10 5 18 10 18 6 0 10 -8 10 -18 0 -27 58 -91 97 -107 77 -32 166 -3 207 68 22 39 24 55 30 242 3 110 10 223 16 250 27 131 105 218 315 348 202 127 245 182 301 392 36 137 45 396 19 543 -50 278 -169 512 -366 716 -191 199 -414 326 -683 388 -116 26 -390 34 -511 14z m-334 -1390 c319 -143 338 -154 345 -193 17 -89 -19 -212 -82 -282 -66 -74 -125 -96 -254 -96 -97 0 -110 2 -164 30 -70 36 -119 90 -147 164 -28 75 -23 219 9 302 23 58 94 149 116 149 7 0 87 -33 177 -74z m1377 -55 c36 -73 37 -78 37 -185 0 -97 -3 -117 -24 -160 -30 -61 -78 -109 -144 -143 -47 -25 -62 -27 -157 -27 -86 0 -113 3 -152 21 -63 29 -119 82 -147 138 -26 52 -47 169 -38 206 8 31 56 57 322 180 l210 97 28 -27 c16 -14 45 -60 65 -100z m-753 -677 c72 -55 146 -200 131 -259 -15 -57 -154 -97 -274 -77 -133 22 -158 78 -94 207 34 67 69 112 111 141 43 30 76 27 126 -12z"/>
+<path d="M1978 3937 c-103 -29 -191 -111 -231 -215 -21 -54 -22 -175 -2 -232 20 -56 19 -59 -12 -66 -78 -19 -177 -107 -216 -192 -33 -72 -31 -207 4 -282 56 -118 161 -190 291 -198 94 -6 165 14 234 67 41 30 103 113 117 154 2 7 15 6 38 -3 97 -40 927 -426 930 -433 3 -7 -934 -447 -952 -447 -3 0 -13 22 -22 48 -10 26 -39 72 -64 101 -166 189 -463 144 -572 -88 -22 -47 -26 -70 -26 -141 0 -96 20 -153 79 -225 34 -41 138 -105 171 -105 13 0 16 -6 12 -22 -3 -13 -13 -51 -22 -86 -68 -272 232 -507 491 -382 62 30 148 127 170 192 26 75 24 188 -5 252 -12 27 -20 50 -18 52 2 2 61 30 133 63 71 32 170 78 219 101 95 45 773 356 888 408 l68 31 432 -199 c661 -304 871 -401 875 -404 1 -2 -6 -24 -17 -48 -57 -134 -24 -286 85 -392 97 -94 263 -118 388 -54 65 33 131 103 161 171 23 51 28 76 28 137 0 46 -7 90 -17 114 -20 49 -20 66 0 66 32 0 136 65 170 105 59 72 79 129 79 225 0 71 -4 94 -26 141 -50 106 -132 172 -247 199 -104 24 -239 -17 -314 -96 -35 -37 -88 -129 -88 -153 0 -6 -3 -11 -7 -11 -9 0 -946 431 -956 440 -9 8 -18 4 368 182 425 197 582 268 592 268 4 0 21 -25 37 -56 32 -61 86 -113 155 -146 39 -19 62 -23 146 -23 90 0 105 3 153 28 70 37 128 97 161 166 22 47 26 70 26 146 0 75 -4 98 -24 140 -44 88 -119 157 -203 184 -43 14 -43 14 -22 72 9 24 16 76 16 116 0 132 -75 248 -200 310 -49 24 -69 28 -142 28 -71 0 -95 -5 -142 -27 -181 -84 -257 -307 -163 -476 14 -25 24 -46 22 -48 -4 -4 -200 -96 -317 -149 -108 -49 -197 -90 -320 -147 -47 -22 -137 -64 -200 -93 -63 -29 -199 -91 -302 -139 l-188 -87 -302 140 c-167 76 -341 157 -388 179 -47 22 -107 50 -135 62 -108 49 -499 231 -502 234 -2 2 8 23 22 48 92 164 22 384 -148 468 -75 37 -175 48 -249 27z"/>
+</g>
+</svg>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name-2">Safe</div>
+                <div class="skill-bar-2">
+                <div class="skill-per-21" per="0%" style="max-width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name-2">Phishing</div>
+                <div class="skill-bar-2">
+                <div class="skill-per-22" per="100%" style="max-width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="safe">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50px" height="50px" viewBox="0 0 256 256" xml:space="preserve" id="greensign">
+<g style="background:green; stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	<path d="M 47.613 6.011 l 8.531 -4.732 c 2.864 -1.588 6.47 -0.276 7.643 2.782 l 3.494 9.108 c 0.666 1.735 2.179 3.005 4.003 3.359 l 9.577 1.859 c 3.215 0.624 5.134 3.948 4.067 7.044 l -3.178 9.223 c -0.606 1.757 -0.263 3.702 0.907 5.147 l 6.141 7.58 c 2.061 2.544 1.395 6.324 -1.412 8.01 l -8.363 5.022 c -1.593 0.957 -2.581 2.667 -2.613 4.526 l -0.168 9.754 c -0.056 3.274 -2.996 5.741 -6.231 5.228 l -9.635 -1.528 c -1.836 -0.291 -3.692 0.384 -4.911 1.787 l -6.398 7.364 c -2.148 2.472 -5.986 2.472 -8.133 0 l -6.398 -7.364 c -1.219 -1.403 -3.075 -2.079 -4.911 -1.787 l -9.635 1.528 c -3.234 0.513 -6.174 -1.954 -6.231 -5.228 l -0.168 -9.754 c -0.032 -1.858 -1.02 -3.569 -2.613 -4.526 l -8.363 -5.022 c -2.807 -1.686 -3.474 -5.466 -1.412 -8.01 l 6.141 -7.58 c 1.17 -1.444 1.513 -3.389 0.907 -5.147 l -3.178 -9.223 c -1.067 -3.096 0.852 -6.42 4.067 -7.044 l 9.577 -1.859 c 1.825 -0.354 3.338 -1.624 4.003 -3.359 l 3.494 -9.108 c 1.173 -3.057 4.779 -4.37 7.643 -2.782 l 8.531 4.732 C 44.012 6.913 45.988 6.913 47.613 6.011 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(35,204,83); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+	<path d="M 41.325 61.54 c -1.134 0 -2.215 -0.481 -2.974 -1.325 l -12.35 -13.73 c -1.477 -1.642 -1.343 -4.171 0.299 -5.649 s 4.171 -1.343 5.649 0.299 l 9.318 10.359 l 18.732 -21.652 c 1.444 -1.67 3.97 -1.854 5.643 -0.408 c 1.671 1.445 1.854 3.971 0.408 5.642 l -21.7 25.081 c -0.751 0.868 -1.838 1.371 -2.986 1.383 C 41.351 61.54 41.338 61.54 41.325 61.54 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</svg> 
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name-3">Safe</div>
+                <div class="skill-bar-3">
+                <div class="skill-per-31" per="98%" style="max-width: 98%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name-3">Phishing</div>
+                <div class="skill-bar-3">
+                <div class="skill-per-32" per="2%" style="max-width: 2%;"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="dashboard">
+
+    <div class="card total">
+        <h3>Total Mails Scanned</h3>
+        <p id="tms">1,245</p>
+    </div>
+
+    <div class="card safe">
+        <h3>Safe Mails</h3>
+        <p id="sm">980</p>
+    </div>
+
+    <div class="card warning">
+        <h3>Warning Mails</h3>
+        <p id="wm">180</p>
+    </div>
+
+    <div class="card phishing">
+        <h3>Phishing Mails</h3>
+        <p id="pm">85</p>
+    </div>
+    <div class="circle-container">
+        <h3>Last Scanned Mail Stats ></h3>
+        <div class="bar-container"> 
+            <div class="box-container">
+        <div class="circular-progress-1">
+            <div class="value-container-1">100%</div>
+        </div>
+        <div class="circle-name"><h3>Safe</h3></div>
+    </div>
+     <div class="box-container">
+        <div class="circular-progress-2">
+            <div class="value-container-2">100%</div>
+        </div>
+        <div class="circle-name"><h3>Phishing</h3></div>
+</div>
+    </div>
+
+</div>
+        </div>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h2>EMAIL THREAT ANALYZER</h2>
+<p>
+Analyze emails instantly using our phishing detection engine. 
+Our system evaluates suspicious patterns, malicious links, and 
+security indicators to determine whether an email is safe, 
+moderate risk, or a phishing threat.
+</p>
+    <button class="press" id="dashboard"><i class="fa-solid fa-chart-bar"></i>      DASHBOARD</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h2>SECURITY ANALYTIC DASHBOARD</h2>
+<p>
+Track the results of scanned emails through a centralized 
+security dashboard. Monitor statistics such as total mails 
+analyzed, safe messages, warning alerts, and detected 
+phishing attempts in real time.
+</p>
+    <button class="press" id="analyse"><i class="fa-solid fa-microscope" id="micro"></i>      ANALYSE</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
